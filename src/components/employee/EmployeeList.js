@@ -8,7 +8,7 @@ export default class EmployeeList extends Component {
                 <h2>Our employees</h2>
                 {
                     this.props.employees.map(employee =>
-                        <div id={`employee-${employee.id}`} key={employee.id}>
+                        <div id={`employee--${employee.id}`} key={employee.id}>
                             {employee.name}
                         </div>
                     )
