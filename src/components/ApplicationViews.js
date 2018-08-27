@@ -19,43 +19,18 @@ export default class ApplicationViews extends Component {
         employees: [],
         owners: []
     }
-
-    deleteAnimal = id => {
-        fetch(`http://localhost:5002/animals/${id}`, {
-            method: "DELETE"
-        })
-        .then(e => e.json())
-        .then(() => fetch(`http://localhost:5002/animals`))
-        .then(e => e.json())
-        .then(animals => this.setState({
-            animals: animals
-        }))
-
-    }
-    deleteEmployee = id => {
-        fetch(`http://localhost:5002/employees/${id}`, {
-            method: "DELETE"
-        })
-        .then(e => e.json())
-        .then(() => fetch(`http://localhost:5002/employees`))
-        .then(e => e.json())
-        .then(employees => this.setState({
-            employees: employees
-        }))
-
-    }
-    deleteOwner = id => {
-        fetch(`http://localhost:5002/owners/${id}`, {
-            method: "DELETE"
-        })
-        .then(e => e.json())
-        .then(() => fetch(`http://localhost:5002/owners`))
-        .then(e => e.json())
-        .then(owners => this.setState({
-            owners: owners
-        }))
-
-    }
+    deleteAnimal = id => AnimalManager.removeAndList(id)
+    .then(animals => this.setState({
+        animals: animals
+    }))
+    deleteEmployee= id => EmployeeManager.removeAndList(id)
+    .then(employees => this.setState({
+        employees: employees
+    }))
+    deleteOwner = id => OwnerManager.removeAndList(id)
+    .then(owners => this.setState({
+        owners: owners
+    }))
 
     componentDidMount() {
         AnimalManager.getAll().then(allAnimals => {

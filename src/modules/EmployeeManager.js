@@ -10,5 +10,15 @@ export default Object.create(null, {
         value: function () {
             return fetch(`${remoteURL}/employees`).then(e => e.json())
         }
+    },
+    removeAndList: {
+        value: function (id) {
+            return fetch(`${remoteURL}/employees/${id}`, {
+                method: "DELETE"
+            })
+                .then(e => e.json())
+                .then(() => fetch(`http://localhost:5002/employees`))
+                .then(e => e.json())
+        }
     }
 })

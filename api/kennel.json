@@ -1,10 +1,6 @@
 {
   "employees": [
     {
-      "id": 1,
-      "name": "Jessica Younker"
-    },
-    {
       "id": 3,
       "name": "Zoe LeBlanc"
     }
@@ -24,18 +20,17 @@
   "animals": [
     {
       "id": 1,
-      "name": "Carl"
+      "name": "Rex"
     },
     {
-      "id": 2,
-      "name": "Frank"
+      "id": 3,
+      "name": "Ray"
     }
   ],
   "owners": [
     {
-      "id": 2,
-      "name": "Tyrion",
-      "phoneNumber": "123-456-7890"
+      "id": 1,
+      "name": "Ash"
     }
   ]
 }
