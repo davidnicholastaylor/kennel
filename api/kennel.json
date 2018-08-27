@@ -23,6 +23,12 @@
       "id": 1,
       "name": "Rex",
       "breed": "Rotweiler"
+    },
+    {
+      "name": "Taco",
+      "breed": "Chihuahua",
+      "employeeId": 3,
+      "id": 2
     }
   ],
   "owners": [
