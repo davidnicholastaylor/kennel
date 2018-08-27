@@ -2,7 +2,8 @@
   "employees": [
     {
       "id": 3,
-      "name": "Zoe LeBlanc"
+      "name": "Zoe LeBlanc",
+      "job": "Receptionist"
     }
   ],
   "locations": [
@@ -20,17 +21,15 @@
   "animals": [
     {
       "id": 1,
-      "name": "Rex"
-    },
-    {
-      "id": 3,
-      "name": "Ray"
+      "name": "Rex",
+      "breed": "Rotweiler"
     }
   ],
   "owners": [
     {
       "id": 1,
-      "name": "Ash"
+      "name": "Ash",
+      "phone": "123-456-7890"
     }
   ]
 }
