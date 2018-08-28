@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Redirect} from 'react-router-dom'
 import React, { Component } from "react"
 import "./applicationViews.css"
 
@@ -127,6 +127,7 @@ export default class ApplicationViews extends Component {
                     <Route path="/animals/edit/:animalId(\d+)" render={(props) => {
                         return <AnimalEdit {...props}
                             editAnimal={this.editAnimal}
+                            animals={this.state.animals}
                             employees={this.state.employees} />
                     }} />
                     <Route path="/animals/:animalId(\d+)" render={(props) => {

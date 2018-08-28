@@ -1,10 +1,10 @@
 {
   "employees": [
     {
-      "name": "Charles",
-      "job": "King",
-      "animalId": 2,
-      "id": 2
+      "name": "Matt Jabroni",
+      "job": "Caretaker",
+      "animalId": 3,
+      "id": 1
     }
   ],
   "locations": [
@@ -21,15 +21,16 @@
   ],
   "animals": [
     {
-      "id": 1,
       "name": "Taco",
-      "breed": "Chihuahua"
+      "breed": "Chihuahua",
+      "employeeId": 2,
+      "id": 3
     },
     {
       "name": "Jolene",
       "breed": "Cocker Spaniel",
-      "employeeId": 2,
-      "id": 2
+      "employeeId": 1,
+      "id": 4
     }
   ],
   "owners": [
@@ -37,12 +38,6 @@
       "id": 1,
       "name": "Ash",
       "phone": "123-456-7890"
-    },
-    {
-      "name": "Cool",
-      "phone": "Rice",
-      "animalId": 1,
-      "id": 2
     }
   ]
 }
