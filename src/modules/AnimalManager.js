@@ -32,5 +32,18 @@ export default Object.create(null, {
                 body: JSON.stringify(newAnimal)
             }).then(e => e.json())
         }
+    },
+    put: {
+        value: function (newAnimal, id) {
+            return fetch(`${remoteURL}/animals/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newAnimal)
+            }).then(e => e.json())
+            .then(() => fetch(`http://localhost:5002/animals`))
+            .then(e => e.json())
+        }
     }
 })

@@ -18,7 +18,7 @@ export default class OwnerList extends Component {
                     </button>
             </div>
             <section className="owners">
-                <h2>Our owners</h2>
+                <h2>Owners</h2>
                 {
                     this.props.owners.map(owner =>
                         <div key={owner.id} className="card">

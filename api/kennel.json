@@ -26,9 +26,10 @@
   ],
   "animals": [
     {
-      "id": 1,
-      "name": "Rex",
-      "breed": "Rotweiler"
+      "name": "Cool",
+      "breed": "Beans",
+      "employeeId": 3,
+      "id": 1
     },
     {
       "name": "Taco",

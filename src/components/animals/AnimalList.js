@@ -17,6 +17,8 @@ export default class AnimalList extends Component {
                     </button>
             </div>
             <section className="animals">
+            <h2>Animals</h2>
+
                 {
                     this.props.animals.map(animal =>
                         <div key={animal.id} className="card">

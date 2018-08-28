@@ -18,6 +18,8 @@ export default class EmployeeList extends Component {
                     </button>
                 </div>
                 <section className="employees">
+                <h2>Employees</h2>
+
                     {
                         this.props.employees.map(employee =>
                             <div key={employee.id} className="card">
