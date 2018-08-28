@@ -31,5 +31,18 @@ export default Object.create(null, {
                 body: JSON.stringify(newOwner)
             }).then(e => e.json())
         }
+    },
+    put: {
+        value: function (newOwner, id) {
+            return fetch(`${remoteURL}/owners/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newOwner)
+            }).then(e => e.json())
+            .then(() => fetch(`http://localhost:5002/owners`))
+            .then(e => e.json())
+        }
     }
 })

@@ -19,10 +19,6 @@ export default class LocationDetail extends Component {
                             {location.name}
                         </h4>
                         <h6 className="card-title">{location.address}</h6>
-                        <a href="#"
-                            onClick={() => this.props.deleteLocation(location.id)
-                                            .then(() => this.props.history.push("/locations"))}
-                            className="card-link">Delete</a>
                     </div>
                 </div>
             </section>

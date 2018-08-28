@@ -12,6 +12,16 @@ export default class EmployeeDetail extends Component {
         const employee = this.props.employees.find(a => a.id === parseInt(this.props.match.params.employeeId)) || {}
 
         return (
+            <React.Fragment>
+                <div className="editButton">
+                <button type="button"
+                    className="btn btn-success"
+                    onClick={() => {
+                        this.props.history.push(`/employees/edit/${employee.id}`)
+                    }}>
+                    Change Employee
+                    </button>
+            </div>
             <section className="employee">
                 <div key={employee.id} className="card">
                     <div className="card-body">
@@ -19,13 +29,10 @@ export default class EmployeeDetail extends Component {
                             {employee.name}
                         </h4>
                         <h6 className="card-title">{employee.job}</h6>
-                        <a href="#"
-                            onClick={() => this.props.deleteEmployee(employee.id)
-                                            .then(() => this.props.history.push("/employees"))}
-                            className="card-link">Delete</a>
                     </div>
                 </div>
             </section>
+            </React.Fragment>
         )
     }
 }

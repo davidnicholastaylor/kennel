@@ -1,15 +1,10 @@
 {
   "employees": [
     {
-      "id": 3,
-      "name": "Zoe LeBlanc",
-      "job": "Caretaker"
-    },
-    {
-      "name": "Matt Jabroni",
-      "job": "Caretaker",
-      "animalId": 3,
-      "id": 4
+      "name": "Charles",
+      "job": "King",
+      "animalId": 2,
+      "id": 2
     }
   ],
   "locations": [
@@ -26,22 +21,15 @@
   ],
   "animals": [
     {
-      "name": "Cool",
-      "breed": "Beans",
-      "employeeId": 3,
-      "id": 1
-    },
-    {
+      "id": 1,
       "name": "Taco",
-      "breed": "Chihuahua",
-      "employeeId": 3,
-      "id": 2
+      "breed": "Chihuahua"
     },
     {
       "name": "Jolene",
       "breed": "Cocker Spaniel",
-      "employeeId": 3,
-      "id": 3
+      "employeeId": 2,
+      "id": 2
     }
   ],
   "owners": [
@@ -51,9 +39,9 @@
       "phone": "123-456-7890"
     },
     {
-      "name": "Joe Blow",
-      "phone": "456-123-7890",
-      "animalId": 3,
+      "name": "Cool",
+      "phone": "Rice",
+      "animalId": 1,
       "id": 2
     }
   ]
