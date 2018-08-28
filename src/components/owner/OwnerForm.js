@@ -5,8 +5,8 @@ export default class OwnerForm extends Component {
     // Set initial state
     state = {
         ownerName: "",
-        breed: "",
-        owner: ""
+        phone: "",
+        animal: ""
     }
 
     // Update state whenever an input field is edited
@@ -22,13 +22,13 @@ export default class OwnerForm extends Component {
      */
     constructNewOwner = evt => {
         evt.preventDefault()
-        if (this.state.owner === "") {
-            window.alert("Please select a caretaker")
+        if (this.state.animal === "") {
+            window.alert("Please select a animal")
         } else {
             const owner = {
                 name: this.state.ownerName,
                 phone: this.state.phone,
-                ownerId: this.props.owners.find(e => e.name === this.state.owner).id
+                animalId: this.props.animals.find(e => e.name === this.state.animal).id
             }
 
             // Create the owner and redirect user to owner list

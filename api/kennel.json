@@ -3,7 +3,13 @@
     {
       "id": 3,
       "name": "Zoe LeBlanc",
-      "job": "Receptionist"
+      "job": "Caretaker"
+    },
+    {
+      "name": "Matt Jabroni",
+      "job": "Caretaker",
+      "animalId": 3,
+      "id": 4
     }
   ],
   "locations": [
@@ -29,6 +35,12 @@
       "breed": "Chihuahua",
       "employeeId": 3,
       "id": 2
+    },
+    {
+      "name": "Jolene",
+      "breed": "Cocker Spaniel",
+      "employeeId": 3,
+      "id": 3
     }
   ],
   "owners": [
@@ -36,6 +48,12 @@
       "id": 1,
       "name": "Ash",
       "phone": "123-456-7890"
+    },
+    {
+      "name": "Joe Blow",
+      "phone": "456-123-7890",
+      "animalId": 3,
+      "id": 2
     }
   ]
 }
