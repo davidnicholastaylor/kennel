@@ -169,7 +169,7 @@ export default class ApplicationViews extends Component {
                             deleteEmployee={this.deleteEmployee}
                                 employees={this.state.employees}
                                 animals={this.state.animals}
-                                deleteEmployee={this.deleteEmployee} />
+                                />
                         } else {
                             return <Redirect to="/login" />
                         }
