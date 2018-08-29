@@ -34,13 +34,13 @@ export default Object.create(null, {
         }
     },
     put: {
-        value: function (newAnimal, id) {
+        value: function (editAnimal, id) {
             return fetch(`${remoteURL}/animals/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(newAnimal)
+                body: JSON.stringify(editAnimal)
             }).then(e => e.json())
             .then(() => fetch(`http://localhost:5002/animals`))
             .then(e => e.json())

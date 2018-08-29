@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import "./animal.css"
 
-export default class AnimalForm extends Component {
+export default class AnimalEdit extends Component {
     // Set initial state
     state = {
         animalName: "",
@@ -10,7 +10,6 @@ export default class AnimalForm extends Component {
     }
     
     componentDidMount() {
-        console.log(parseInt(this.props.match.params.animalId))
         const animal = this.props.animals.find(a => a.id === parseInt(this.props.match.params.animalId))
         this.setState({animalName: animal.name, breed: animal.breed})
     }
@@ -66,7 +65,7 @@ export default class AnimalForm extends Component {
                         <label htmlFor="employee">Assign to caretaker</label>
                         <select defaultValue="" name="employee" id="employee"
                                 onChange={this.handleFieldChange}>
-                            <option value="">Select an employee</option>
+                            <option value="">Select Caretaker</option>
                         {
                             this.props.employees.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
                         }

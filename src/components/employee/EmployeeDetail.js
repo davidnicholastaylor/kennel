@@ -13,7 +13,7 @@ export default class EmployeeDetail extends Component {
 
         return (
             <React.Fragment>
-                <div className="editButton">
+                <div className="employeeButton">
                 <button type="button"
                     className="btn btn-success"
                     onClick={() => {
@@ -22,7 +22,7 @@ export default class EmployeeDetail extends Component {
                     Change Employee
                     </button>
             </div>
-            <section className="employee">
+            <section className="employees">
                 <div key={employee.id} className="card">
                     <div className="card-body">
                         <h4 className="card-title">

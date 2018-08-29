@@ -13,7 +13,7 @@ export default class OwnerDetail extends Component {
 
         return (
             <React.Fragment>
-                <div className="editButton">
+                <div className="ownerButton">
                     <button type="button"
                         className="btn btn-success"
                         onClick={() => {
@@ -22,7 +22,7 @@ export default class OwnerDetail extends Component {
                         Change Owner
                     </button>
                 </div>
-                <section className="owner">
+                <section className="owners">
                     <div key={owner.id} className="card">
                         <div className="card-body">
                             <h4 className="card-title">

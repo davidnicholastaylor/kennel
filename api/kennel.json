@@ -5,6 +5,12 @@
       "job": "Caretaker",
       "animalId": 3,
       "id": 1
+    },
+    {
+      "name": "Collin Marks",
+      "job": "Caretaker",
+      "animalId": 3,
+      "id": 2
     }
   ],
   "locations": [
@@ -21,9 +27,9 @@
   ],
   "animals": [
     {
-      "name": "Taco",
-      "breed": "Chihuahua",
-      "employeeId": 2,
+      "name": "Taco v23",
+      "breed": "Chihuahua ",
+      "employeeId": 1,
       "id": 3
     },
     {
@@ -35,9 +41,16 @@
   ],
   "owners": [
     {
-      "id": 1,
-      "name": "Ash",
-      "phone": "123-456-7890"
+      "name": "Cool",
+      "phone": "456-123-7890",
+      "animalId": 4,
+      "id": 1
+    },
+    {
+      "name": "Joe Blow",
+      "phone": "456-123-7890",
+      "animalId": 4,
+      "id": 2
     }
   ]
 }

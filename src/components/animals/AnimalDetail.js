@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./animal.css"
 
 
+
 export default class AnimalDetail extends Component {
 
 
@@ -12,7 +13,6 @@ export default class AnimalDetail extends Component {
             collection that was passed down from ApplicationViews
         */
         const animal = this.props.animals.find(a => a.id === parseInt(this.props.match.params.animalId)) || {}
-
 
 
         return (
