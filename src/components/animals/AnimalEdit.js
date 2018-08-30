@@ -37,7 +37,7 @@ export default class AnimalEdit extends Component {
             }
             const animalEditId = parseInt(this.props.match.params.animalId)
             // Create the animal and redirect user to animal list
-            this.props.editAnimal(animal, animalEditId).then(() => this.props.history.push("/animals"))
+            this.props.editAnimal(animal, animalEditId, "animals").then(() => this.props.history.push("/animals"))
         }
     }
 

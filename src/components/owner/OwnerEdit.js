@@ -33,7 +33,7 @@ export default class OwnerForm extends Component {
             const ownerEditId = parseInt(this.props.match.params.ownerId)
 
             // Create the owner and redirect user to owner list
-            this.props.editOwner(owner, ownerEditId).then(() => this.props.history.push("/owners"))
+            this.props.editOwner(owner, ownerEditId, "owners").then(() => this.props.history.push("/owners"))
         }
     }
 

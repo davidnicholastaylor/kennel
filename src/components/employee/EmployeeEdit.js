@@ -33,7 +33,7 @@ export default class EmployeeForm extends Component {
             const employeeEditId = parseInt(this.props.match.params.employeeId)
 
             // Create the employee and redirect user to employee list
-            this.props.editEmployee(employee, employeeEditId).then(() => this.props.history.push("/employees"))
+            this.props.editEmployee(employee, employeeEditId, "employees").then(() => this.props.history.push("/employees"))
         }
     }
 

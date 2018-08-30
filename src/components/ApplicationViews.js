@@ -7,10 +7,7 @@ import EmployeeList from './employee/EmployeeList'
 import LocationList from './location/LocationList'
 import OwnerList from './owner/OwnersList'
 
-import AnimalManager from "../modules/AnimalManager"
-import EmployeeManager from "../modules/EmployeeManager"
-import LocationManager from "../modules/LocationManager"
-import OwnerManager from "../modules/OwnerManager"
+import APIManager from "../modules/APIManager"
 
 import AnimalDetail from './animals/AnimalDetail'
 import EmployeeDetail from './employee/EmployeeDetail'
@@ -41,71 +38,71 @@ export default class ApplicationViews extends Component {
         owners: []
     }
 
-    addAnimal = animal => AnimalManager.post(animal)
-        .then(() => AnimalManager.getAll())
+    addAnimal = (animal, link) => APIManager.post(animal, link)
+        .then(() => APIManager.getAll("animals"))
         .then(animals => this.setState({
             animals: animals
         }))
-    editAnimal = (animal, id) => AnimalManager.put(animal, id)
-        .then(() => AnimalManager.getAll())
+    editAnimal = (animal, id, link) => APIManager.put(animal, id, link)
+        .then(() => APIManager.getAll("animals"))
         .then(animals => this.setState({
             animals: animals
         }))
-    deleteAnimal = id => AnimalManager.removeAndList(id)
+    deleteAnimal = (id, link) => APIManager.removeAndList(id, link)
         .then(animals => this.setState({
             animals: animals
         }))
 
 
-    addEmployee = employee => EmployeeManager.post(employee)
-        .then(() => EmployeeManager.getAll())
+    addEmployee = (employee, link) => APIManager.post(employee, link)
+        .then(() => APIManager.getAll("employees"))
         .then(employees => this.setState({
             employees: employees
         }))
-    editEmployee = (employee, id) => EmployeeManager.put(employee, id)
-        .then(() => EmployeeManager.getAll())
+    editEmployee = (employee, id, link) => APIManager.put(employee, id, link)
+        .then(() => APIManager.getAll("employees"))
         .then(employees => this.setState({
             employees: employees
         }))
-    deleteEmployee = id => EmployeeManager.removeAndList(id)
+    deleteEmployee = (id, link) => APIManager.removeAndList(id, link)
         .then(employees => this.setState({
             employees: employees
         }))
 
 
-    addOwner = owner => OwnerManager.post(owner)
-        .then(() => OwnerManager.getAll())
+    addOwner = (owner, link) => APIManager.post(owner, link)
+        .then(() => APIManager.getAll("owners"))
         .then(owners => this.setState({
             owners: owners
         }))
-    editOwner = (owner, id) => OwnerManager.put(owner, id)
-        .then(() => OwnerManager.getAll())
+    editOwner = (owner, id, link) => APIManager.put(owner, id, link)
+        .then(() => APIManager.getAll("owners"))
         .then(owners => this.setState({
             owners: owners
         }))
-    deleteOwner = id => OwnerManager.removeAndList(id)
+    deleteOwner = (id, link) => APIManager.removeAndList(id, link)
         .then(owners => this.setState({
             owners: owners
         }))
 
 
     componentDidMount() {
-        AnimalManager.getAll().then(allAnimals => {
+        APIManager.getAll("animals").then(allAnimals => {
             this.setState({
                 animals: allAnimals
             })
         })
-        EmployeeManager.getAll().then(allEmployees => {
+        APIManager.getAll("employees").then(allEmployees => {
             this.setState({
                 employees: allEmployees
             })
         })
-        LocationManager.getAll().then(allLocations => {
+        APIManager.getAll("locations").then(allLocations => {
             this.setState({
                 locations: allLocations
             })
         })
-        OwnerManager.getAll().then(allOwners => {
+        APIManager.getAll("owners").then(allOwners => {
             this.setState({
                 owners: allOwners
             })
