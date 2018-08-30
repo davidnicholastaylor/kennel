@@ -6,7 +6,7 @@ export default class EmployeeForm extends Component {
     state = {
         employeeName: "",
         job: "",
-        animal: ""
+        location: ""
     }
 
     // Update state whenever an input field is edited
@@ -22,13 +22,13 @@ export default class EmployeeForm extends Component {
      */
     constructNewEmployee = evt => {
         evt.preventDefault()
-        if (this.state.animal === "") {
-            window.alert("Please select an animal")
+        if (this.state.location === "") {
+            window.alert("Please select an location")
         } else {
             const employee = {
                 name: this.state.employeeName,
                 job: this.state.job,
-                animalId: this.props.animals.find(e => e.name === this.state.animal).id
+                locationId: this.props.locations.find(e => e.name === this.state.location).id
             }
 
             // Create the employee and redirect user to employee list
@@ -56,12 +56,12 @@ export default class EmployeeForm extends Component {
                                id="job" placeholder="Job" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="animal">Assign to animal</label>
-                        <select defaultValue="" name="animal" id="animal"
+                        <label htmlFor="location">Assign to location</label>
+                        <select defaultValue="" name="location" id="location"
                                 onChange={this.handleFieldChange}>
-                            <option value="">Select an animal</option>
+                            <option value="">Select an location</option>
                         {
-                            this.props.animals.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
+                            this.props.locations.map(e => <option key={e.id} id={e.id}>{e.name}</option>)
                         }
                         </select>
                     </div>

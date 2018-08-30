@@ -177,12 +177,12 @@ export default class ApplicationViews extends Component {
                     <Route path="/employees/new" render={(props) => {
                         return <EmployeeForm {...props}
                             addEmployee={this.addEmployee}
-                            animals={this.state.animals} />
+                            locations={this.state.locations} />
                     }} />
                     <Route path="/employees/edit/:employeeId(\d+)" render={(props) => {
                         return <EmployeeEdit {...props}
                             editEmployee={this.editEmployee}
-                            animals={this.state.animals} />
+                            locations={this.state.locations} />
                     }} />
                     <Route path="/employees/:employeeId(\d+)" render={(props) => {
                         return <EmployeeDetail {...props}

@@ -1,16 +1,23 @@
 {
   "employees": [
     {
-      "name": "Matt Jabroni",
-      "job": "Caretaker",
-      "animalId": 3,
+      "name": "Wanda",
+      "job": "What happened",
+      "locationId": 1,
       "id": 1
     },
     {
       "name": "Collin Marks",
       "job": "Caretaker",
       "animalId": 3,
-      "id": 2
+      "id": 2,
+      "locationId": 2
+    },
+    {
+      "name": "Matt Jabroni",
+      "job": "Caretaker",
+      "locationId": 1,
+      "id": 3
     }
   ],
   "locations": [
@@ -37,6 +44,18 @@
       "breed": "Cocker Spaniel",
       "employeeId": 2,
       "id": 4
+    },
+    {
+      "name": "Manny",
+      "breed": "Doberman",
+      "employeeId": 1,
+      "id": 5
+    },
+    {
+      "name": "Cool",
+      "breed": "Beans",
+      "employeeId": 3,
+      "id": 6
     }
   ],
   "owners": [
