@@ -29,6 +29,10 @@ export default class OwnerDetail extends Component {
                                 {owner.name}
                             </h4>
                             <h6 className="card-title">{owner.phone}</h6>
+                            <button
+                                onClick={() => this.props.deleteOwner(owner.id, "owners")
+                                .then(() => this.props.history.push("/owners"))}
+                                className="card-link">Delete</button>
                         </div>
                     </div>
                 </section>

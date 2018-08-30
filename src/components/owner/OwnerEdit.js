@@ -9,6 +9,8 @@ export default class OwnerForm extends Component {
         animal: ""
     }
 
+    
+
     // Update state whenever an input field is edited
     handleFieldChange = evt => {
         const stateToChange = {}

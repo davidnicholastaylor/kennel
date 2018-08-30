@@ -10,9 +10,9 @@ export default class AnimalCard extends Component {
                     <h5 className="card-title">
                         {this.props.animal.name}
                         <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
-                        <a href="#"
-                            onClick={() => this.props.deleteAnimal(this.props.animal.id)}
-                            className="card-link">Discharge</a>
+                        <button
+                            onClick={() => this.props.deleteAnimal(this.props.animal.id, "animals")}
+                            className="card-link">Discharge</button>
                     </h5>
                 </div>
             </div>

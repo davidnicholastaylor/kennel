@@ -49,6 +49,7 @@ export default class ApplicationViews extends Component {
             animals: animals
         }))
     deleteAnimal = (id, link) => APIManager.removeAndList(id, link)
+        .then(() => APIManager.getAll("animals"))
         .then(animals => this.setState({
             animals: animals
         }))
@@ -65,6 +66,7 @@ export default class ApplicationViews extends Component {
             employees: employees
         }))
     deleteEmployee = (id, link) => APIManager.removeAndList(id, link)
+    .then(() => APIManager.getAll("employees"))
         .then(employees => this.setState({
             employees: employees
         }))
@@ -81,6 +83,7 @@ export default class ApplicationViews extends Component {
             owners: owners
         }))
     deleteOwner = (id, link) => APIManager.removeAndList(id, link)
+        .then(() => APIManager.getAll("owners"))
         .then(owners => this.setState({
             owners: owners
         }))
@@ -134,7 +137,6 @@ export default class ApplicationViews extends Component {
                     <Route exact path="/animals" render={(props) => {
                         if (this.isAuthenticated()) {
                             return <AnimalList {...props}
-                             deleteAnimal={this.deleteAnimal}
                                 animals={this.state.animals}
                                 deleteAnimal={this.deleteAnimal} />
                         } else {
@@ -164,6 +166,7 @@ export default class ApplicationViews extends Component {
                         if (this.isAuthenticated()) {
                             return <EmployeeList {...props}
                             deleteEmployee={this.deleteEmployee}
+                            deleteAnimal={this.deleteAnimal}
                                 employees={this.state.employees}
                                 animals={this.state.animals}
                                 />
@@ -191,7 +194,6 @@ export default class ApplicationViews extends Component {
                     <Route exact path="/owners" render={(props) => {
                         if (this.isAuthenticated()) {
                             return <OwnerList {...props}
-                            deleteOwner={this.deleteOwner}
                                 owners={this.state.owners}
                                 deleteOwner={this.deleteOwner} />
                         } else {
